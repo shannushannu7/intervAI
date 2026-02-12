@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntervAI - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo / App name -->
+    <h1>IntervAI</h1>
+    <p class="subtitle">Interview preparation made simple</p>
+
+    <div class="card">
+      <form id="loginForm" novalidate>
+        <!-- Email or Mobile: user can enter either -->
+        <div class="form-group">
+          <label for="emailOrMobile">Email or Mobile Number</label>
+          <input
+            type="text"
+            id="emailOrMobile"
+            name="emailOrMobile"
+            placeholder="Enter email or phone number"
+            required
+            autocomplete="username"
+          >
+          <span class="error-msg hidden" id="emailError"></span>
+        </div>
+
+        <!-- Password with show/hide icon -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+              required
+              autocomplete="current-password"
+            >
+            <button type="button" class="password-toggle" id="togglePassword" aria-label="Show password">
+              👁
+            </button>
+          </div>
+          <a href="#" class="forgot-link" id="forgotPassword">Forgot password?</a>
+          <span class="error-msg hidden" id="passwordError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+
+      <p class="form-footer">
+        Don't have an account? <a href="signup.html">Create an account</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
