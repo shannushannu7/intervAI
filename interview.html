@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntervAI - Interview</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IntervAI</h1>
+    <p class="subtitle" id="roleSubtitle">Practice Interview</p>
+
+    <div class="card">
+      <p class="question-number" id="questionNumber">Question 1 of 5</p>
+      <h2 id="questionText" style="font-size: 1.15rem; margin-bottom: 1rem; color: var(--white);">
+        Loading...
+      </h2>
+      <div class="form-group">
+        <label for="answer">Your answer</label>
+        <textarea
+          id="answer"
+          name="answer"
+          rows="5"
+          placeholder="Type your answer here..."
+        ></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" id="nextQuestionBtn">
+        Next
+      </button>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/interview.js"></script>
+</body>
+</html>

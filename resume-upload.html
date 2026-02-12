@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntervAI - Upload Resume</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IntervAI</h1>
+    <p class="subtitle">Upload your resume (PDF) to personalize your practice</p>
+
+    <div class="card">
+      <!-- Upload zone: click or drag and drop. We only accept PDF (frontend only, no server) -->
+      <div class="upload-zone" id="uploadZone">
+        <input type="file" id="fileInput" accept=".pdf,application/pdf" aria-label="Choose PDF file">
+        <p id="uploadPrompt">Click or drag your PDF resume here</p>
+        <p id="fileName" class="hidden" style="margin-top: 0.5rem; color: var(--lavender);"></p>
+      </div>
+
+      <button type="button" class="btn btn-primary" id="nextBtn" disabled style="margin-top: 1.5rem;">
+        Next
+      </button>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/resume.js"></script>
+</body>
+</html>

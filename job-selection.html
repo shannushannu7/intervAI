@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntervAI - Choose Job Role</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IntervAI</h1>
+    <p class="subtitle">Select the job role you're preparing for</p>
+
+    <div class="card">
+      <p style="margin-bottom: 1rem; color: var(--lavender);">Select one role:</p>
+      <div id="jobList">
+        <!-- Job roles are added by JavaScript for real-time logic -->
+      </div>
+      <button type="button" class="btn btn-primary" id="startBtn" disabled style="margin-top: 1.5rem;">
+        Start Interview
+      </button>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/job-selection.js"></script>
+</body>
+</html>

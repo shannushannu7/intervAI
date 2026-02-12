@@ -1,0 +1,323 @@
+/**
+ * IntervAI - Shared Styles
+ * Colour theme: Lavender & Dark Purple with White text
+ * Modern minimal UI - one place for global look and feel
+ */
+
+/* Reset: remove default margins and use border-box for easier sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS variables - change these to tweak the whole app theme */
+:root {
+  --lavender: #e6e6fa;
+  --lavender-dark: #c9b8e6;
+  --dark-purple: #2d1b4e;
+  --dark-purple-deep: #1a0f2e;
+  --white: #ffffff;
+  --text-on-dark: #ffffff;
+  --accent: #9b7ddb;
+  --shadow: rgba(45, 27, 78, 0.3);
+  --error: #ff6b6b;
+  --success: #69db7c;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--dark-purple-deep) 0%, var(--dark-purple) 50%, #3d2a6e 100%);
+  min-height: 100vh;
+  color: var(--text-on-dark);
+  line-height: 1.5;
+}
+
+/* Container to center content and limit width */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.subtitle {
+  color: var(--lavender);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* Form groups: label + input */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--lavender);
+}
+
+/* Inputs and textareas - block level, full width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--lavender-dark);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Password wrapper: input + show/hide icon */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--lavender);
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: var(--white);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--lavender-dark));
+  color: var(--dark-purple);
+  margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--lavender);
+  border: 2px solid var(--lavender-dark);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+}
+
+/* Links */
+.form-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.form-footer a {
+  color: var(--lavender);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+/* Forgot password link */
+.forgot-link {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.forgot-link a {
+  color: var(--lavender);
+  text-decoration: none;
+}
+
+.forgot-link a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+/* Validation error message */
+.error-msg {
+  font-size: 0.85rem;
+  color: var(--error);
+  margin-top: 0.35rem;
+}
+
+/* Card-style panels */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* File upload area */
+.upload-zone {
+  border: 2px dashed var(--lavender-dark);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.upload-zone:hover,
+.upload-zone.dragover {
+  border-color: var(--accent);
+  background: rgba(155, 125, 219, 0.15);
+}
+
+.upload-zone input[type="file"] {
+  display: none;
+}
+
+/* Job role cards */
+.job-role {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.job-role:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--lavender-dark);
+}
+
+.job-role.selected {
+  background: rgba(155, 125, 219, 0.35);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* Interview question number */
+.question-number {
+  font-size: 0.9rem;
+  color: var(--lavender);
+  margin-bottom: 0.5rem;
+}
+
+/* Feedback sections */
+.feedback-section {
+  margin-bottom: 1.5rem;
+}
+
+.feedback-section h3 {
+  font-size: 1rem;
+  color: var(--lavender);
+  margin-bottom: 0.5rem;
+}
+
+.feedback-section ul {
+  padding-left: 1.25rem;
+  color: var(--white);
+}
+
+.feedback-section li {
+  margin-bottom: 0.35rem;
+}
+
+/* Score display */
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--lavender-dark));
+  color: var(--dark-purple);
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+/* Utility: hide element */
+.hidden {
+  display: none !important;
+}
+
+/* Mobile friendly */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+}

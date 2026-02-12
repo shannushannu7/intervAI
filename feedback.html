@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntervAI - Your Feedback</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IntervAI</h1>
+    <p class="subtitle">Interview feedback</p>
+
+    <div class="card">
+      <p style="text-align: center; color: var(--lavender); margin-bottom: 0.5rem;">Your score</p>
+      <div class="score-circle" id="scoreDisplay">0</div>
+      <p style="text-align: center; color: var(--lavender); margin-bottom: 1.5rem;">out of 10</p>
+
+      <div class="feedback-section">
+        <h3>Strengths</h3>
+        <ul id="strengthsList"></ul>
+      </div>
+      <div class="feedback-section">
+        <h3>Areas to improve</h3>
+        <ul id="weaknessesList"></ul>
+      </div>
+      <div class="feedback-section">
+        <h3>Improvement tips</h3>
+        <ul id="tipsList"></ul>
+      </div>
+
+      <button type="button" class="btn btn-primary" id="restartBtn">Restart Interview</button>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntervAI - Create Account</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IntervAI</h1>
+    <p class="subtitle">Create your account to get started</p>
+
+    <div class="card">
+      <form id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            required
+          >
+          <span class="error-msg hidden" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="emailOrMobile">Email or Mobile Number</label>
+          <input
+            type="text"
+            id="emailOrMobile"
+            name="emailOrMobile"
+            placeholder="Enter email or phone number"
+            required
+          >
+          <span class="error-msg hidden" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password (min 6 characters)"
+              required
+            >
+            <button type="button" class="password-toggle" id="togglePassword" aria-label="Show password">
+              👁
+            </button>
+          </div>
+          <span class="error-msg hidden" id="passwordError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Re-enter password"
+              required
+            >
+            <button type="button" class="password-toggle" id="toggleConfirm" aria-label="Show password">
+              👁
+            </button>
+          </div>
+          <span class="error-msg hidden" id="confirmError"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Account</button>
+      </form>
+
+      <p class="form-footer">
+        Already have an account? <a href="index.html">Log in</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
